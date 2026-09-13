@@ -62,3 +62,4 @@ else:
     print("Tipo de plazo: Días calendario")
 
 print("Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
+print("Base legal: TUO de la Ley N.° 27444, artículos 133 y 134.")
