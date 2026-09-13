@@ -27,7 +27,11 @@ print("2. Días calendario")
 
 tipo = input("Selecciona una opción (1 o 2): ")
 
-fecha = datetime.strptime(fecha_inicio, "%d/%m/%Y")
+try:
+    fecha = datetime.strptime(fecha_inicio, "%d/%m/%Y")
+except ValueError:
+    print("Fecha inválida. Ingresa una fecha válida.")
+    exit()
 
 if tipo == "1":
     fecha_vencimiento = fecha
