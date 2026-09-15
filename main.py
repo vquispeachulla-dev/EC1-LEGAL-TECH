@@ -1,21 +1,8 @@
 from datetime import datetime, timedelta
+
 FERIADOS_NACIONALES_2026 = {
-    "01/01/2026",
-    "02/04/2026",
-    "03/04/2026",
-    "01/05/2026",
-    "07/06/2026",
-    "29/06/2026",
-    "23/07/2026",
-    "28/07/2026",
-    "29/07/2026",
-    "06/08/2026",
-    "30/08/2026",
-    "08/10/2026",
-    "01/11/2026",
-    "08/12/2026",
-    "09/12/2026",
-    "25/12/2026"
+    "01/01/2026", "02/04/2026", "03/04/2026", "01/05/2026", "07/06/2026", "29/06/2026", "23/07/2026", "28/07/2026", 
+    "29/07/2026", "06/08/2026", "30/08/2026", "08/10/2026", "01/11/2026", "08/12/2026", "09/12/2026", "25/12/2026"
 }
 
 print(" CALCULADORA DE PLAZOS ADMINISTRATIVOS: RECURSOS ADMINISTRATIVOS")
@@ -65,4 +52,17 @@ else:
     print(" Tipo de cómputo: Días calendario")
 
 print(" Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
+
+from datetime import date
+
+hoy = date.today()
+dias_restantes = (fecha_vencimiento.date() - hoy).days #se le agrega el days para que lea el resultado como número
+
+if dias_restantes < 0 :
+   print("\n Tu plazo ya venció hace", abs(dias_restantes), "dias calendario") #Uso "abs" par que convierta el numero negativo a positivo
+else :
+   print("\n Te quedan", dias_restantes, "días calendario")
+
+print("\nBase legal: TUO de la Ley N.° 27444, artículos 133 y 134.")
+
 print("\nBase legal: TUO de la Ley N.° 27444, artículos 133 y 134.")
