@@ -18,19 +18,19 @@ FERIADOS_NACIONALES_2026 = {
     "25/12/2026"
 }
 
-fecha_inicio = input("Ingresa la fecha de inicio (DD/MM/AAAA): ")
-dias = int(input("Ingresa el número de días del plazo: "))
+fecha_inicio = input("Ingrese la fecha de notificación (DD/MM/AAAA): ")
+dias = int(input("Ingrese el número de días del plazo: "))
 
-print("\nTipo de plazo:")
-print("1. Días hábiles")
-print("2. Días calendario")
+print("\nMencione el tipo de cómputo que desea aplicar:")
+print(" 1. Días hábiles")
+print(" 2. Días calendario")
 
-tipo = input("Selecciona una opción (1 o 2): ")
+tipo = input("Seleccione una opción (1 o 2): ")
 
 try:
     fecha = datetime.strptime(fecha_inicio, "%d/%m/%Y")
 except ValueError:
-    print("Fecha inválida. Ingresa una fecha válida.")
+    print("Fecha inválida. Ingrese una fecha válida.")
     exit()
 
 if tipo == "1":
@@ -53,13 +53,13 @@ else:
     exit()
 
 print("\nResultado:")
-print("Fecha de inicio:", fecha.strftime("%d/%m/%Y"))
-print("Días del plazo:", dias)
+print("\n Fecha de inicio:", fecha.strftime("%d/%m/%Y"))
+print(" Días del plazo:", dias)
 
 if tipo == "1":
-    print("Tipo de plazo: Días hábiles")
+    print(" Tipo de cómputo: Días hábiles")
 else:
-    print("Tipo de plazo: Días calendario")
+    print(" Tipo de cómputo: Días calendario")
 
-print("Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
-print("Base legal: TUO de la Ley N.° 27444, artículos 133 y 134.")
+print(" Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
+print("\nBase legal: TUO de la Ley N.° 27444, artículos 133 y 134.")
