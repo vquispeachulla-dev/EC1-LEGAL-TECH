@@ -18,8 +18,11 @@ FERIADOS_NACIONALES_2026 = {
     "25/12/2026"
 }
 
-fecha_inicio = input("Ingrese la fecha de notificación (DD/MM/AAAA): ")
-dias = int(input("Ingrese el número de días del plazo: "))
+print(" CALCULADORA DE PLAZOS ADMINISTRATIVOS: RECURSOS ADMINISTRATIVOS")
+tipo_recurso = input("\nEscoga entre: Apelación - Reconsideración: ")
+fecha_inicio = input("\nIngrese la fecha de notificación (DD/MM/AAAA): ")
+
+dias = 15 #plazo que da la ley para interponer los recursos
 
 print("\nMencione el tipo de cómputo que desea aplicar:")
 print(" 1. Días hábiles")
