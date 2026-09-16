@@ -24,20 +24,19 @@ else:
     exit()
 
 fecha_notificacion = input("\nFecha de notificación (DD/MM/AAAA): ")
-
-print("\nTipo de cómputo:")
-print("\n     1. Días hábiles")
-print("     2. Días calendario")
-
-tipo = input("\nSeleccione una opción (1 o 2): ")
+dias = 15
 
 try:
     fecha = datetime.strptime(fecha_notificacion, "%d/%m/%Y")
 except ValueError:
     print("\nFecha inválida. Ingrese una fecha válida.")
     exit()
+    
+print("\nTipo de cómputo:")
+print("\n     1. Días hábiles")
+print("     2. Días calendario")
 
-dias = 15
+tipo = input("\nSeleccione una opción (1 o 2): ")
 
 if tipo == "1":
     fecha_vencimiento = fecha
