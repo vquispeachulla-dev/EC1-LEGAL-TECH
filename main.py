@@ -92,5 +92,5 @@ else:
 
 print(
     "\nBase legal: TUO de la Ley N.° 27444, "
-    "artículos 133, 134 y 218."
+    "artículos 133, 134."
 )
