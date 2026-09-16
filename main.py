@@ -76,10 +76,7 @@ if tipo == "1":
 else:
     print("Tipo de cómputo utilizado: Días calendario")
 
-print(
-    "Fecha de vencimiento:",
-    fecha_vencimiento.strftime("%d/%m/%Y")
-)
+print("Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
 
 if dias_restantes < 0:
     print(
