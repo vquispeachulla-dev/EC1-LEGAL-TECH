@@ -10,7 +10,7 @@ FERIADOS_NACIONALES_2026 = {
 print("\nCALCULADORA DE PLAZOS ADMINISTRATIVOS")
 
 print("\nTipo de recurso:")
-print("\n       1. Reconsideración")
+print("\n     1. Reconsideración")
 print("     2. Apelación")
 
 tipo_recurso = input("\nSeleccione una opción (1 o 2): ")
@@ -26,7 +26,7 @@ else:
 fecha_notificacion = input("\nFecha de notificación (DD/MM/AAAA): ")
 
 print("\nTipo de cómputo:")
-print("\n       1. Días hábiles")
+print("\n     1. Días hábiles")
 print("     2. Días calendario")
 
 tipo = input("\nSeleccione una opción (1 o 2): ")
@@ -62,7 +62,7 @@ hoy = date.today()
 dias_restantes = (fecha_vencimiento.date() - hoy).days
 
 print("\nRESULTADO")
-print("\n       Tipo de recurso:", tipo_recurso)
+print("\n     Tipo de recurso:", tipo_recurso)
 print("     Fecha de notificación:", fecha.strftime("%d/%m/%Y"))
 print("     Plazo:", dias, "días")
 
@@ -76,6 +76,6 @@ print("     Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
 if dias_restantes < 0:
     print("\nEl plazo ya venció hace", abs(dias_restantes),"días.")
 else:
-    print("Días restantes para interponer el recurso:", dias_restantes,"dias calendario.")
+    print("     Días restantes para interponer el recurso:", dias_restantes,"dias calendario.")
 
 print("\n*Base legal: TUO de la Ley N.° 27444, artículos 133, 134, 139 y 207")
