@@ -7,13 +7,13 @@ FERIADOS_NACIONALES_2026 = {
     "01/11/2026", "08/12/2026", "09/12/2026", "25/12/2026"
 }
 
-print("CALCULADORA DE PLAZOS ADMINISTRATIVOS")
+print("\nCALCULADORA DE PLAZOS ADMINISTRATIVOS")
 
 print("\nTipo de recurso:")
-print("1. Reconsideración")
-print("2. Apelación")
+print("\n       1. Reconsideración")
+print("     2. Apelación")
 
-tipo_recurso = input("Seleccione una opción (1 o 2): ")
+tipo_recurso = input("\nSeleccione una opción (1 o 2): ")
 
 if tipo_recurso == "1":
     tipo_recurso = "Reconsideración"
@@ -23,15 +23,13 @@ else:
     print("\nOpción no válida.")
     exit()
 
-fecha_notificacion = input(
-    "Fecha de notificación (DD/MM/AAAA): "
-)
+fecha_notificacion = input("\nFecha de notificación (DD/MM/AAAA): ")
 
 print("\nTipo de cómputo:")
-print("1. Días hábiles")
-print("2. Días calendario")
+print("\n       1. Días hábiles")
+print("     2. Días calendario")
 
-tipo = input("Seleccione una opción (1 o 2): ")
+tipo = input("\nSeleccione una opción (1 o 2): ")
 
 try:
     fecha = datetime.strptime(fecha_notificacion, "%d/%m/%Y")
@@ -50,10 +48,7 @@ if tipo == "1":
 
         fecha_texto = fecha_vencimiento.strftime("%d/%m/%Y")
 
-        if (
-            fecha_vencimiento.weekday() < 5
-            and fecha_texto not in FERIADOS_NACIONALES_2026
-        ):
+        if (fecha_vencimiento.weekday() < 5 and fecha_texto not in FERIADOS_NACIONALES_2026):
             dias_contados += 1
 
 elif tipo == "2":
@@ -67,30 +62,20 @@ hoy = date.today()
 dias_restantes = (fecha_vencimiento.date() - hoy).days
 
 print("\nRESULTADO")
-print("Tipo de recurso:", tipo_recurso)
-print("Fecha de notificación:", fecha.strftime("%d/%m/%Y"))
-print("Plazo:", dias, "días")
+print("\n       Tipo de recurso:", tipo_recurso)
+print("     Fecha de notificación:", fecha.strftime("%d/%m/%Y"))
+print("     Plazo:", dias, "días")
 
 if tipo == "1":
-    print("Tipo de cómputo utilizado: Días hábiles")
+    print("     Tipo de cómputo utilizado: Días hábiles")
 else:
-    print("Tipo de cómputo utilizado: Días calendario")
+    print("     Tipo de cómputo utilizado: Días calendario")
 
-print("Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
+print("     Fecha de vencimiento:", fecha_vencimiento.strftime("%d/%m/%Y"))
 
 if dias_restantes < 0:
-    print(
-        "El plazo ya venció hace",
-        abs(dias_restantes),
-        "días."
-    )
+    print("\nEl plazo ya venció hace", abs(dias_restantes),"días.")
 else:
-    print(
-        "Días restantes para interponer el recurso:",
-        dias_restantes
-    )
+    print("Días restantes para interponer el recurso:", dias_restantes,"dias calendario.")
 
-print(
-    "\nBase legal: TUO de la Ley N.° 27444, "
-    "artículos 133, 134."
-)
+print("\n*Base legal: TUO de la Ley N.° 27444, artículos 133, 134, 139 y 207")
